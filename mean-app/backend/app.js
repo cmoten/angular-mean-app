@@ -6,10 +6,9 @@ const Post = require("./models/post");
 
 const app = express();
 
-<<<<<<< HEAD
 mongoose
   .connect(
-    "mongodb+srv://cmoten:<password>@cluster0.cisnz.mongodb.net/node-angular?retryWrites=true&w=majority"
+    "mongodb+srv://cmoten:<password>@cluster0-ntrwp.mongodb.net/node-angular?retryWrites=true"
   )
   .then(() => {
     console.log("Connected to database!");
@@ -17,15 +16,6 @@ mongoose
   .catch(() => {
     console.log("Connection failed!");
   });
-=======
-mongoose.connect("mongodb+srv://cmoten<password>@cluster0.cisnz.mongodb.net/node-angular?retryWrites=true&w=majority")
-.then(()=>{
-  console.log('Connected to database!')
-})
-.catch(()=>{
-  console.log('Connection failed!')
-});
->>>>>>> 715be291dabc7602575dc4ddc6f7389aa21387d9
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
